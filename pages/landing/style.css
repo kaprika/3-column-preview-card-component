@@ -1,0 +1,126 @@
+:root {
+    --color-gold: hsl(31, 77%, 52%);
+    --color-cyan: hsl(184, 100%, 22%);
+    --color-green: hsl(179, 100%, 13%);
+
+    --color-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --color-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Lexend Deca';
+    src: url('../../assets/fonts/LexendDeca-VariableFont_wght.ttf') format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Big Shoulders';
+    src: url('../../assets/fonts/BigShoulders-VariableFont_opsz,wght.ttf') format('truetype');
+}
+
+html {
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 62.5%;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+body {
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 4rem 0;
+}
+
+.container {
+    display: flex;
+    max-width: 100rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.card {
+    padding: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8rem;
+}
+
+.card_sedans {
+    background-color: var(--color-gold);
+}
+
+.card_suvs {
+    background-color: var(--color-cyan);
+}
+
+.card_luxury {
+    background-color: var(--color-green);
+}
+
+h1 {
+    color: var(--color-background-headings-buttons);
+    font-family: 'Big Shoulders', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.card__text {
+    color: var(--color-paragraphs);
+}
+
+.button {
+    padding: 1.5rem 3rem;
+    background-color: var(--color-background-headings-buttons);
+    border-radius: 25px;
+    border: 0.1rem solid transparent;
+    text-transform: capitalize;
+    font-family: inherit;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.button_sedans {
+    color: var(--color-gold);
+}
+
+.button_suvs {
+    color: var(--color-cyan);
+}
+
+.button_luxury {
+    color: var(--color-green);
+}
+
+.button:hover {
+    background-color: transparent;
+    color: var(--color-background-headings-buttons);
+    border: 0.1rem solid var(--color-background-headings-buttons);
+}
+
+@media (max-width: 68.75em) {
+    .container {
+        flex-direction: column;
+    }
+
+    .card {
+        max-width: 350px;
+        gap: 2.5rem;
+    }
+
+    .card__content {
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+}
